@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/13 10:22:09 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 18:27:51 by agiedroi         ###   ########.fr       */
+/*   Created: 2025/11/13 18:19:36 by agiedroi          #+#    #+#             */
+/*   Updated: 2025/11/13 18:27:34 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "libft.h"
-# include <stdlib.h>
-# include <stdbool.h>
-# include <limits.h>
-# define ERROR_MESSAGE "Error\n"
+#include "libft.h"
 
-typedef struct s_stack_node
+void	error_handler(void)
 {
-	int			n;
-	int			i;
-	int			cost;
-	bool		above_median;
-	bool		cheapest;
-	struct s_stack_node	*next;
-	struct s_stack_node	*prev;
-}	t_stack_node;
-
-void	error_handler(void);
-#endif
+	ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
+	exit(EXIT_FAILURE);
+}
