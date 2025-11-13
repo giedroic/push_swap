@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:19:20 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 19:19:58 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:34:16 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static long	ft_atol(long n)
 	return (n);
 }
 
-static is_duplicate(t_stack_node **a, int d)
+static void is_duplicate(t_stack_node **a, int d)
 {
 	while (a != NULL)
 	{
@@ -40,10 +40,7 @@ static is_duplicate(t_stack_node **a, int d)
 			input_error();
 		a = a->next;	
 	}
-	return (0);
 }
-
-
 
 void	init_stack_a(t_stack_node **a, char *argv[])
 {
