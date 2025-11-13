@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:22:09 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 19:26:02 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:30:12 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ typedef struct s_stack_node
 }	t_stack_node;
 
 void	input_error(void);
-void	malloc_error(void)
-void	append_node(t_stack_node **stack, int n)
-t_stack_node	*find_last(t_stack_node *stack)
+void	malloc_error(void);
+void	init_stack_a(t_stack_node **a, char *argv[]);
+void	append_node(t_stack_node **stack, int n);
+t_stack_node	*find_last(t_stack_node *stack);
 #endif
