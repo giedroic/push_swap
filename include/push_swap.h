@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:22:09 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 18:27:51 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 18:48:05 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 typedef struct s_stack_node
 {
-	int			n;
-	int			i;
+	int			nbr;
+	int			index;
 	int			cost;
 	bool		above_median;
 	bool		cheapest;
