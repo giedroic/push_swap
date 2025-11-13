@@ -6,9 +6,18 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:15:51 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 19:18:07 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:25:53 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+t_stack_node	*find_last(t_stack_node *stack)
+{
+	if (stack == NULL)
+		return (NULL);
+	while (stack->next != NULL)
+		stack = stack->next;
+	return (stack);
+}
 
 void	append_node(t_stack_node **stack, int n)
 {
