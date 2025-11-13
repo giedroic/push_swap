@@ -6,14 +6,14 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:19:20 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 19:34:16 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:35:11 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static long	ft_atol(long n)
 {
 	long		n;
-	char	sign;
+	char		sign;
 
 	n = 0;
 	sign = 0;
@@ -32,20 +32,20 @@ static long	ft_atol(long n)
 	return (n);
 }
 
-static void is_duplicate(t_stack_node **a, int d)
+static void	is_duplicate(t_stack_node **a, int d)
 {
 	while (a != NULL)
 	{
 		if (a->nbr == n)
 			input_error();
-		a = a->next;	
+		a = a->next;
 	}
 }
 
 void	init_stack_a(t_stack_node **a, char *argv[])
 {
 	long	n;
-	int	i;
+	int		i;
 
 	i = 0;
 	while (argv[i] != NULL)
