@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:22:09 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 17:57:04 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 18:24:13 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdbool.h>
 # include <limits.h>
+# define ERROR_MESSAGE "Error\n"
 
 typedef struct s_stack_node
 {
