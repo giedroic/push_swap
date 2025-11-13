@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:22:09 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 18:48:05 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:03:58 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-void	error_handler(void);
+void	input_error(void);
 #endif
