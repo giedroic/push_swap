@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Wextra -Werror -I libft/include -I include
+CFLAGS = -Wall -Wextra -Werror -g -I libft/include -I include
 
 LDFLAGS = -L libft
 
