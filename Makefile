@@ -14,7 +14,7 @@ BIN_DIR = bin/
 OBJ_DIR = obj/
 
 MAIN_SRC = main.c
-UTILS_SRC = utils.c
+UTILS_SRC = error_handlers.c  init_stack_a.c  main.c  stack_utils.c
 
 UTILS_OBJ = $(addprefix obj/, $(UTILS_SRC:%.c=%.o))
 MAIN_OBJ = $(addprefix obj/, $(MAIN_SRC:%.c=%.o))
