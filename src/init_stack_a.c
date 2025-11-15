@@ -6,11 +6,16 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:19:20 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/15 23:08:49 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/15 23:09:42 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	ft_isescape(int c)
+{
+	return ((c >= 9 && c <= 13) || c == 32);
+}
 
 static long	ft_atol(char *nptr)
 {
