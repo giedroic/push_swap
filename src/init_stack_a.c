@@ -6,13 +6,13 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:19:20 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/15 23:07:35 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/15 23:08:49 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static long	ft_atol(long n)
+static long	ft_atol(char *nptr)
 {
 	long		n;
 	char		sign;
