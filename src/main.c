@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:11:31 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/13 19:35:24 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/15 23:05:20 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	main(int argc, char *argv[])
 	else if (argc == 2)
 		argv = ft_split(argv[argc - 1], ' ');
 	init_stack_a(&a, argv);
+	(void) b;
 	return (0);
 }

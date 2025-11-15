@@ -6,9 +6,11 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:15:51 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/15 23:01:13 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/15 23:07:21 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 t_stack_node	*find_last(t_stack_node *stack)
 {
