@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:09:21 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:24:01 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:26:28 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	rotate(t_stack_node **stack)
 {
 	t_stack_node	*last_node;
-	int		len;
+	int				len;
 
 	len = stack_len(*stack);
 	if (stack == NULL || *stack == NULL || len == 1)
