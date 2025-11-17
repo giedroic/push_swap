@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:55:12 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:19:14 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:23:25 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,13 @@ void	ft_free_split(char **split_array)
 		i++;
 	}
 	free(split_array);
+}
+
+void	error_free(t_stack_node **a, char **argv, bool is_argc_2)
+{
+	free_stack(a);
+	if (is_argc_2)
+		ft_free_split(argv);
+	ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
+	exit(EXIT_FAILURE);
 }
