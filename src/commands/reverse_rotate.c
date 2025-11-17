@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:25:57 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:34:51 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:36:18 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,10 @@ static void	reverse_rotate(t_stack_node **stack)
 	last->prev = NULL;
 	*stack = last;
 	last->next->prev = last;
+}
+
+void	rra(t_stack_node **a)
+{
+	reverse_rotate(a);
+	ft_printf("rra\n");
 }
