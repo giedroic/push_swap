@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:12:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 14:38:22 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:45:11 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	append_node(t_stack_node **stack, int n)
 	}
 }
 
-void	stack_len(t_stack_node *stack)
+int	stack_len(t_stack_node *stack)
 {
 	int	len;
 

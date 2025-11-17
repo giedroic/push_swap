@@ -38,7 +38,7 @@ void		error_free(t_stack_node **a, char **argv, bool is_argc_2);
 
 t_stack_node	*find_last(t_stack_node *stack);
 void		append_node(t_stack_node **stack, int n);
-void	stack_len(t_stack_node *stack);
+int	stack_len(t_stack_node *stack)
 
 void		stack_init(t_stack_node **a, char **argv, bool is_argc_2);
 

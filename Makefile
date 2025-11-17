@@ -15,6 +15,7 @@ OBJ_DIR = obj/
 
 MAIN_SRC = main.c
 UTILS_SRC = stack_init.c stack_utils.c error_free.c sort.c
+COMMANDS_SRC = swap.c
 
 UTILS_OBJ = $(addprefix obj/, $(UTILS_SRC:%.c=%.o))
 MAIN_OBJ = $(addprefix obj/, $(MAIN_SRC:%.c=%.o))
