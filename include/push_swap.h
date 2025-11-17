@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:03:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:18:38 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:19:21 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_stack_node
 int	error_syntax(char *nptr);
 int	error_duplicate(char *nptr);
 void	free_stack(t_stack_node **stack);
+void	ft_free_split(char **split_array);
 
 t_stack_node	*find_last(t_stack_node *stack);
 void	append_node(t_stack_node **stack, int n);
