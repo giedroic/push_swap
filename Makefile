@@ -8,7 +8,7 @@ MKDIR = mkdir -p
 RMDIR = rm -rf
 
 NAME = push_swap
-NAME := $(addprefix bin/,$(NAME))
+NAME := $(addprefix bin/, $(NAME))
 
 BIN_DIR = bin/
 OBJ_DIR = obj/
@@ -16,9 +16,11 @@ OBJ_DIR = obj/
 MAIN_SRC = main.c
 UTILS_SRC = stack_init.c stack_utils.c error_free.c sort.c
 COMMANDS_SRC = swap.c
+COMMANDS_SRC := $(addprefix commands/, $(COMMANDS_SRC))
 
-UTILS_OBJ = $(addprefix obj/, $(UTILS_SRC:%.c=%.o))
 MAIN_OBJ = $(addprefix obj/, $(MAIN_SRC:%.c=%.o))
+UTILS_OBJ = $(addprefix obj/, $(UTILS_SRC:%.c=%.o))
+COMMANDS_OBJ = $(addprefix obj/, $(COMMANDS_SRC:%.c=%.o))
 
 INCLUDE = include/push_swap.h
 
@@ -26,7 +28,7 @@ INCLUDE = include/push_swap.h
 
 all : libft $(OBJ_DIR) $(BIN_DIR) $(NAME)
 
-bin/push_swap: $(MAIN_OBJ) $(UTILS_OBJ)
+bin/push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ)
 	$(CC) $^ $(LDFLAGS) -o $@ $(LDLIBS)
 
 obj/%.o : src/%.c $(INCLUDE)
