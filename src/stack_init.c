@@ -6,13 +6,13 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:06:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:10:34 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:28:42 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_atol(char *nptr, int **result)
+static int	ft_atol(char *nptr, int *result)
 {
 	long		n;
 	char		sign;
@@ -39,4 +39,23 @@ static int	ft_atol(char *nptr, int **result)
 		n *= -1;
 	*result = (int) n;
 	return (0);
+}
+
+void	stack_init(t_stack_node **a, char **argv, bool is_argc_2)
+{
+	int	n;
+	int	i;
+
+	i = 0;
+	while (argv[i])
+	{
+		if (ft_atol(argv[i], &n))
+			error_free(a, argv, is_argc_2);
+		if (error_duplicate(*a, n);
+			error_free(a, argv, is_argc_2);
+		append_node(a, n);	
+		++i;
+	}
+	if (is_argc_2)
+		ft_free_split(argv);
 }
