@@ -66,5 +66,5 @@ void	init_nodes(t_stack_node *a, t_stack_node *b);
 
 void	finish_rotation(t_stack_node **stack,
 			t_stack_node *top_node,
-			char stack_name)
+			char stack_name);
 #endif
