@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:56:12 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:06:36 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:07:59 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,10 @@ void	pa(t_stack_node **a, t_stack_node **b)
 {
 	push(a,b);
 	ft_printf("pa\n");
+}
+
+void	pb(t_stack_node **b, t_stack_node **a)
+{
+	push(b,a);
+	ft_printf("pb\n");
 }
