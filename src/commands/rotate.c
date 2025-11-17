@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:09:21 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:37:27 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:41:56 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	rotate(t_stack_node **stack)
 
 	if (stack == NULL || *stack == NULL || stack_len(*stack) == 1)
 		return ;
-	last_node = find_last(*stack);
+	last_node = find_last_node(*stack);
 	last_node->next = *stack;
 	*stack = (*stack)->next;
 	(*stack)->prev = NULL;

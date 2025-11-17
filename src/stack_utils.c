@@ -6,13 +6,13 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:12:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 14:45:11 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:41:43 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack_node	*find_last(t_stack_node *stack)
+t_stack_node	*find_last_node(t_stack_node *stack)
 {
 	if (stack == NULL)
 		return (NULL);
@@ -40,7 +40,7 @@ void	append_node(t_stack_node **stack, int n)
 	}
 	else
 	{
-		last_node = find_last(*stack);
+		last_node = find_last_node(*stack);
 		if (last_node == NULL)
 			return ;
 		last_node->next = node;
