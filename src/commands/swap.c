@@ -6,12 +6,12 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:31:27 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 14:48:40 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:14:22 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+// 3 2 1
 static void	swap(t_stack_node **head)
 {
 	int	len;
@@ -21,7 +21,7 @@ static void	swap(t_stack_node **head)
 		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;
-	(*head)->prev->next = (*head)->next;
+	(*head) = (*head)->next;
 	if ((*head)->next == NULL)
 		(*head)->next->prev = (*head)->prev;
 	(*head)->next = (*head)->prev;
