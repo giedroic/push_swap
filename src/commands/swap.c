@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:31:27 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:29:29 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:30:28 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	swap(t_stack_node **head)
 {
-	if (head == NULL || *head == NULL || ft_stack_len(*head) == 1)
+	if (head == NULL || *head == NULL || stack_len(*head) == 1)
 		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;
