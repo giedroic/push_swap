@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:03:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:42:05 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:22:54 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,16 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-int	error_syntax(char *nptr);
-int	error_duplicate(t_stack_node *a, int n);
-void	free_stack(t_stack_node **stack);
-void	ft_free_split(char **split_array);
-void	error_free(t_stack_node **a, char **argv, bool is_argc_2);
+int		error_syntax(char *nptr);
+int		error_duplicate(t_stack_node *a, int n);
+void		free_stack(t_stack_node **stack);
+void		ft_free_split(char **split_array);
+void		error_free(t_stack_node **a, char **argv, bool is_argc_2);
 
 t_stack_node	*find_last(t_stack_node *stack);
-void	append_node(t_stack_node **stack, int n);
+void		append_node(t_stack_node **stack, int n);
 
-void	stack_init(t_stack_node **a, char **argv, bool is_argc_2);
+void		stack_init(t_stack_node **a, char **argv, bool is_argc_2);
+
+bool	stack_sorted(t_stack_node *stack)
 #endif
