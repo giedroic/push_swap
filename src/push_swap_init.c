@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 18:53:57 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 19:04:21 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,25 @@ void	set_current_position(t_stack_node *stack)
 			stack->above_median = false;
 		stack = stack->next;
 		++i;	
+	}
+}
+
+void	set_cost(t_stack_node *a, t_stack_node *b)
+{
+	int	len_a;
+	int	len_b;
+
+	len_a = stack_len(a);
+	len_b = stack_len(b);
+	while (b != NULL)
+	{
+		b->push_cost = b->current_position;
+		if (b->above_median == false)
+			b->push_cost = len_b - b->current_position;
+		if (b->target_node->above_median == true)
+			b->push_cost += b->target_node->current_position;
+		else
+			b->push_cost += len_a - b->target_node->current_position;
+		b = b->next;
 	}
 }

@@ -60,4 +60,5 @@ void	rrb(t_stack_node **b);
 void	rrr(t_stack_node **a, t_stack_node **b);
 
 void	set_current_position(t_stack_node *stack);
+void	set_cost(t_stack_node *a, t_stack_node *b);
 #endif
