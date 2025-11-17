@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 19:06:31 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 19:07:58 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 20:33:06 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,14 @@ void	sort_three(t_stack_node **a)
 		rra(a);
 	if ((*a)->value > (*a)->next->value)
 		sa(a);
+}
+
+void	handle_five(t_stack_node **a, t_stack_node **b)
+{
+	while (stack_len(*a) > 3)
+	{
+		init_nodes(*a, *b);
+		finish_rotation(a, find_smallest(*a), 'a');
+		pb(b, a);
+	}
 }
