@@ -27,10 +27,13 @@ INCLUDE = include/push_swap.h
 
 all : libft $(OBJ_DIR) $(BIN_DIR) $(NAME)
 
-bin/push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ) $(INCLUDE)
+bin/push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ)
 	$(CC) $^ $(LDFLAGS) -o $@ $(LDLIBS)
 
-obj/%.o : src/%.c
+obj/%.o : src/%.c $(INCLUDE)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+obj/%.o : src/commands/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 libft :
