@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:15:08 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 15:35:15 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:12:08 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ int	main(int argc, char **argv)
 	{
 		if (stack_len(a) == 2)
 			sa(&a);
+		else if (stack_len(a) == 3)
+			sort_three(&a);
 	}
 	free_stack(&a);
-	(void) b;
 	return (0);
 }
