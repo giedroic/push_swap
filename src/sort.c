@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:20:51 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 18:02:15 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:04:06 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static t_stack_node	*find_gretest(t_stack_node *stack)
 	if (stack == NULL)
 		return (NULL);
 	greatest_node = stack;
-	while (stack = stack->next != NULL)
+	while ((stack = stack->next) != NULL)
 	{
 		if (stack->value > greatest_node->value)
 			greatest_node = stack;
