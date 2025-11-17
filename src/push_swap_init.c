@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 19:12:55 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 19:23:06 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,13 @@ void	set_cheapest(t_stack_node *b)
 		b = b->next;
 	}
 	best_match_node->cheapest = true;
+}
+
+void	init_nodes(t_stack_node *a, t_stack_node *b)
+{
+	set_target_node(a, b);
+	set_current_position(a);
+	set_current_position(b);
+	set_cost(a, b);
+	set_cheapest(b);
 }
