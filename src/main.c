@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:15:08 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 14:25:02 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:35:15 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ int	main(int argc, char **argv)
 	stack_init(&a, argv, argc == 2);
 	if (stack_sorted(a) == false)
 	{
-		;
+		if (stack_len(a) == 2)
+			sa(&a);
 	}
 	free_stack(&a);
+	(void) b;
 	return (0);
 }
