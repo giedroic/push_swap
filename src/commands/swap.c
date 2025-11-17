@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:31:27 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 15:33:05 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:33:53 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,11 @@ void	sb(t_stack_node **b)
 {
 	swap(b);
 	ft_printf("sb\n");
+}
+
+void	ss(t_stack_node **a, t_stack_node **b)
+{
+	swap(a);
+	swap(b);
+	ft_printf("ss\n");
 }
