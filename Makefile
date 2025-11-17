@@ -16,7 +16,6 @@ OBJ_DIR = obj/
 MAIN_SRC = main.c
 UTILS_SRC = stack_init.c stack_utils.c error_free.c sort.c
 COMMANDS_SRC = swap.c
-COMMANDS_SRC := $(addprefix commands/, $(COMMANDS_SRC))
 
 MAIN_OBJ = $(addprefix obj/, $(MAIN_SRC:%.c=%.o))
 UTILS_OBJ = $(addprefix obj/, $(UTILS_SRC:%.c=%.o))
@@ -31,7 +30,7 @@ all : libft $(OBJ_DIR) $(BIN_DIR) $(NAME)
 bin/push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ)
 	$(CC) $^ $(LDFLAGS) -o $@ $(LDLIBS)
 
-obj/%.o : src/%.c $(INCLUDE)
+obj/%.o : src/%.c src/commands%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 libft :
