@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:06:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 12:42:16 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:43:14 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_atol(char *nptr, int *result)
 	while (ft_isdigit(*nptr))
 	{
 		n = (n * 10) + (*nptr++ - '0');
-		if (sign == '+' && n > INT_MAX)
+		if (sign == '+' && n > (long) INT_MAX)
 			return (1);
 		else if (sign == '-' && n > -(long) INT_MIN)
 			return (1);
