@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:03:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:06:35 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:15:56 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,7 @@ typedef struct s_stack_node
 
 int	error_syntax(char *nptr)
 int	error_duplicate(char *nptr)
+
+t_stack_node	*find_last(t_stack_node *stack)
+
 #endif
