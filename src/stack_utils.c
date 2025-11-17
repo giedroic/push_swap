@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:12:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:41:43 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:44:54 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,19 @@ int	stack_len(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (len);
+}
+
+t_stack_node	*find_smallest(t_stack_node *stack)
+{
+	t_stack_node	*smallest_node;
+	
+	if (stack == NULL)
+		return (NULL);
+	smallest_node = stack;
+	while ((stack = stack->next) != NULL)
+	{
+		if (stack->value < smallest_node->value)
+			smallest_node = stack;
+	}
+	return (smallest_node);
 }
