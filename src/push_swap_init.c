@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 19:23:06 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 20:35:39 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	set_cost(t_stack_node *a, t_stack_node *b)
 
 void	set_cheapest(t_stack_node *b)
 {
-	long		best_match_value;
+	long			best_match_value;
 	t_stack_node	*best_match_node;
 
 	if (b == NULL)
