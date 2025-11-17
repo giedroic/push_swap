@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:56:12 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:04:39 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:06:36 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ static void	push(t_stack_node **dest, t_stack_node **src)
 		node_to_push->next->prev = node_to_push;
 		*dest = node_to_push;
 	}
+}
+
+void	pa(t_stack_node **a, t_stack_node **b)
+{
+	push(a,b);
+	ft_printf("pa\n");
 }
