@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 20:07:57 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 20:48:08 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 20:52:55 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,33 @@ static void	move_nodes(t_stack_node **a, t_stack_node **b)
 	finish_rotation(b, cheapest_node, 'b');
 	finish_rotation(a, cheapest_node->target_node, 'a');
 	pa(a, b);
+}
+
+void	push_swap(t_stack_node **a, t_stack_node **b)
+{
+	t_stack_node	*smallest;
+	int				len_a;
+
+	len_a = stack_len(*a);
+	if (len_a == 5)
+		handle_five(a, b);
+	else
+	{
+		while (len_a-- > 3)
+			pb(b, a);
+	}
+	sort_three(a);
+	while (*b != NULL)
+	{
+		init_nodes(*a, *b);
+		move_nodes(a, b);
+	}
+	set_current_position(*a);
+	smallest = find_smallest(*a);
+	if (smallest->above_median)
+		while (*a != smallest)
+			ra(a);
+	else
+		while (*a != smallest)
+			rra(a);
 }
