@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:03:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 09:04:09 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:12:50 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,16 @@
 # include "libft.h"
 # include <stdlib.h>
 # include <stdbool.h>
+
+typedef struct s_stack_node
+{
+	int					value;
+	int					current_position;
+	int					final_inex;
+	bool				above_median;
+	bool				cheapest;	
+	struct s_stack_node	*target_node;
+	struct s_stack_node	*next;
+	struct s_stack_node	*prev;
+}	t_stack_node;
 #endif
