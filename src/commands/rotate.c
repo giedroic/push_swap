@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:09:21 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 16:23:00 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 16:24:01 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,11 @@ void	rb(t_stack_node **b)
 {
 	rotate(b);
 	ft_printf("rb\n");
+}
+
+void	rrr(t_stack_node **a, t_stack_node **b)
+{
+	rotate(a);
+	rotate(b);
+	ft_printf("rr\n");
 }
