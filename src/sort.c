@@ -1,11 +1,12 @@
 /* ************************************************************************** */
-/*                                                                            */ /*                                                        :::      ::::::::   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 14:20:51 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 18:08:26 by agiedroi         ###   ########.fr       */
+/*   Created: 2025/11/17 19:06:31 by agiedroi          #+#    #+#             */
+/*   Updated: 2025/11/17 19:07:58 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +28,16 @@ bool	stack_sorted(t_stack_node *stack)
 static t_stack_node	*find_greatest(t_stack_node *stack)
 {
 	t_stack_node	*greatest_node;
-	
+
 	if (stack == NULL)
 		return (NULL);
 	greatest_node = stack;
-	while ((stack = stack->next) != NULL)
+	stack = stack->next;
+	while (stack != NULL)
 	{
 		if (stack->value > greatest_node->value)
 			greatest_node = stack;
+		stack = stack->next;
 	}
 	return (greatest_node);
 }

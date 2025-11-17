@@ -6,17 +6,17 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 19:04:21 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 19:05:40 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void set_target_node(t_stack_node *a, t_stack_node *b)
+static void	set_target_node(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
 	t_stack_node	*target_node;
-	long		best_match_index;
+	long			best_match_index;
 
 	while (b != NULL)
 	{
@@ -56,7 +56,7 @@ void	set_current_position(t_stack_node *stack)
 		else
 			stack->above_median = false;
 		stack = stack->next;
-		++i;	
+		++i;
 	}
 }
 
