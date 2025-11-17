@@ -43,6 +43,7 @@ int	stack_len(t_stack_node *stack);
 void		stack_init(t_stack_node **a, char **argv, bool is_argc_2);
 
 bool	stack_sorted(t_stack_node *stack);
+void	sort_three(t_stack_node **a);
 
 void	sa(t_stack_node **a);
 void	sb(t_stack_node **b);
