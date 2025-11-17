@@ -6,9 +6,11 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:55:12 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:38:24 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:44:42 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	error_syntax(char *nptr)
 {
