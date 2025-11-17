@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 20:35:39 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 20:59:12 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 				best_match_index = current_a->value;
 				target_node = current_a;
 			}
+			current_a = current_a->next;
 		}
 		if (LONG_MAX == best_match_index)
 			b->target_node = find_smallest(a);
