@@ -47,6 +47,7 @@ clean :
 
 fclean :
 	$(MAKE) -C libft fclean
-	$(RMDIR) $(OBJ_DIR) $(BIN_DIR)
+	$(RMDIR) $(OBJ_DIR)
+	$(RM) $(NAME)
 
 re : fclean all
