@@ -41,6 +41,7 @@ t_stack_node	*find_last_node(t_stack_node *stack);
 void		append_node(t_stack_node **stack, int n);
 int	stack_len(t_stack_node *stack);
 t_stack_node	*find_smallest(t_stack_node *stack);
+t_stack_node	*find_cheapest(t_stack_node *stack);
 
 void		stack_init(t_stack_node **a, char **argv, bool is_argc_2);
 
