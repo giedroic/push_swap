@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:12:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:15:26 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:43:18 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	append_node(t_stack_node **stack, int n)
 	node = malloc(sizeof(t_stack_node));
 	if (node == NULL)
 		return ;
-	node->nbr = n;
+	node->value = n;
 	node->next = NULL;
 	if (*stack == NULL)
 	{
