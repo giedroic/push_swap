@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:31:27 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 15:14:22 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:18:10 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void	swap(t_stack_node **head)
 		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;
-	(*head) = (*head)->next;
-	if ((*head)->next == NULL)
+	(*head)->prev->next = (*head)->next;
+	if ((*head)->next != NULL)
 		(*head)->next->prev = (*head)->prev;
 	(*head)->next = (*head)->prev;
 	(*head)->prev = NULL;
