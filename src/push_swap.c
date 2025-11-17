@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 20:07:57 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 20:28:14 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 20:48:08 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,20 @@ void	finish_rotation(t_stack_node **stack,
 				rrb(stack);
 		}
 	}
+}
+
+static void	move_nodes(t_stack_node **a, t_stack_node **b)
+{
+	t_stack_node	*cheapest_node;
+
+	cheapest_node = find_cheapest(*b);
+	if (cheapest_node->above_median == true
+		&& cheapest_node->target_node->above_median == true)
+		rotate_both(a, b, cheapest_node);
+	else if (cheapest_node->above_median == false
+		&& cheapest_node->target_node->above_median == false)
+		reverse_rotate_both(a, b, cheapest_node);
+	finish_rotation(b, cheapest_node, 'b');
+	finish_rotation(a, cheapest_node->target_node, 'a');
+	pa(a, b);
 }
