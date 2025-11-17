@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:12:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:43:18 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:50:45 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void	append_node(t_stack_node **stack, int n)
 	else
 	{
 		last_node = find_last(*stack);
+		if (last_node == NULL)
+			return ;
 		last_node->next = node;
 		node->prev = last_node;
 	}
