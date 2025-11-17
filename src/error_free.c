@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:55:12 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:44:42 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:45:32 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	error_syntax(char *nptr)
 		++nptr;
 	if (!ft_isdigit(*nptr))
 		return (1);
-	while (ft_isdigit(*ntpr))
+	while (ft_isdigit(*nptr))
 		++nptr;
 	if (*nptr != '\0')
 		return (1);
