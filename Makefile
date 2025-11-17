@@ -8,7 +8,6 @@ MKDIR = mkdir -p
 RMDIR = rm -rf
 
 NAME = push_swap
-NAME := $(addprefix bin/, $(NAME))
 
 BIN_DIR = bin/
 OBJ_DIR = obj/
@@ -25,9 +24,9 @@ INCLUDE = include/push_swap.h
 
 .PHONY : all libft clean fclean re
 
-all : libft $(OBJ_DIR) $(BIN_DIR) $(NAME)
+all : libft $(OBJ_DIR) $(NAME)
 
-bin/push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ)
+push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ)
 	$(CC) $^ $(LDFLAGS) -o $@ $(LDLIBS)
 
 obj/%.o : src/%.c $(INCLUDE)
@@ -41,9 +40,6 @@ libft :
 
 $(OBJ_DIR) :
 	$(MKDIR) $@	
-
-$(BIN_DIR) :
-	$(MKDIR) $@
 
 clean :
 	$(MAKE) -C libft clean
