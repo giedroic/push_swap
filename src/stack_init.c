@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:06:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:42:37 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:53:13 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static int	ft_atol(char *nptr, int *result)
 
 	n = 0;
 	sign = '+';
-
 	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
@@ -54,7 +53,7 @@ void	stack_init(t_stack_node **a, char **argv, bool is_argc_2)
 			error_free(a, argv, is_argc_2);
 		if (error_duplicate(*a, n))
 			error_free(a, argv, is_argc_2);
-		append_node(a, n);	
+		append_node(a, n);
 		++i;
 	}
 	if (is_argc_2)
