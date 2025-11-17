@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:06:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 11:28:42 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:37:01 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static int	ft_atol(char *nptr, int *result)
 
 	n = 0;
 	sign = '+';
-	while (ft_isescape(*nptr))
+
+	while (*nptr >= 9 && *nptr <= 13 || *nptr == 32)
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 		sign = *nptr++;
