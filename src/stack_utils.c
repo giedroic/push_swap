@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:12:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/18 08:37:46 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 15:47:39 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	stack_len(t_stack_node *stack)
 	if (stack == NULL)
 		return (0);
 	len = 0;
-	while (stack)
+	while (stack != NULL)
 	{
 		++len;
 		stack = stack->next;
