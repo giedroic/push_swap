@@ -31,7 +31,6 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-int		error_syntax(char *nptr);
 int		error_duplicate(t_stack_node *a, int n);
 void		free_stack(t_stack_node **stack);
 void		ft_free_split(char **split_array);
