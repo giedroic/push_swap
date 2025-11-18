@@ -24,9 +24,9 @@ INCLUDE = include/push_swap.h
 
 LIBFT_STATIC = libft/libft.a
 
-.PHONY : all libft clean fclean re
+.PHONY : all clean fclean re
 
-all : libft $(OBJ_DIR) $(NAME)
+all : $(LIBFT_STATIC) $(OBJ_DIR) $(NAME)
 
 push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ) $(LIBFT_STATIC)
 	$(CC) $^ $(LDFLAGS) -o $@ $(LDLIBS)
@@ -37,7 +37,7 @@ obj/%.o : src/%.c $(INCLUDE)
 obj/%.o : src/commands/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-libft :
+$(LIBFT_STATIC) :
 	$(MAKE) -C libft
 
 $(OBJ_DIR) :
