@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 20:59:12 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 13:08:28 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	set_cost(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
 	int	len_b;
+	int	cost_a;
 
 	len_a = stack_len(a);
 	len_b = stack_len(b);
@@ -73,11 +74,16 @@ void	set_cost(t_stack_node *a, t_stack_node *b)
 		b->push_cost = b->current_position;
 		if (b->above_median == false)
 			b->push_cost = len_b - b->current_position;
-		if (b->target_node->above_median == true)
-			b->push_cost += b->target_node->current_position;
+		cost_a = b->target_node->current_position;
+		if (b->target_node->above_median == false)
+			cost_a = len_a - b->target_node->current_position;
+		if (b->above_median == b->target_node->above_median)
+		{
+			if (cost_a > b->push_cost)
+				b->push_cost = cost_a;
+		}
 		else
-			b->push_cost += len_a - b->target_node->current_position;
-		b = b->next;
+			b->push_cost += cost_a;
 	}
 }
 
