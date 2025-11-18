@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 09:50:30 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/18 10:44:51 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:59:31 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,17 @@ void	average_partitioning(t_stack_node **a, t_stack_node **b)
 				ra(a);
 			--i;
 		}
+	}
+}
+
+void	push_till_three(t_stack_node **a, t_stack_node **b)
+{
+	int	len_a;
+
+	len_a = stack_len(*a);
+	while (len_a > 3)
+	{
+		pb(b, a);
+		--len_a;
 	}
 }
