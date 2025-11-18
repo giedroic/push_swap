@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 19:06:31 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 20:33:06 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 15:45:46 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ bool	stack_sorted(t_stack_node *stack)
 {
 	if (stack == NULL)
 		return (true);
-	while (stack->next)
+	while (stack->next != NULL)
 	{
 		if (stack->value > stack->next->value)
 			return (false);
