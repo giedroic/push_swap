@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:27:13 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/18 13:08:28 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 13:19:05 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void	set_cost(t_stack_node *a, t_stack_node *b)
 		}
 		else
 			b->push_cost += cost_a;
+		b = b->next;
 	}
 }
 
