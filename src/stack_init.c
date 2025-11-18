@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:06:06 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/17 21:21:52 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 15:46:52 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	stack_init(t_stack_node **a, char **argv, bool is_argc_2)
 
 	i = 0;
 	n = 0;
-	while (argv[i])
+	while (argv[i] != NULL)
 	{
 		if (ft_atol(argv[i], &n))
 			error_free(a, argv, is_argc_2);
