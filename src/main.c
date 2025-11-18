@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:15:08 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/18 11:07:22 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:11:48 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 		return (1);
 	if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-	else
+	else if (argv != NULL || *argv != NULL)
 		argv++;
 	if ((argv == NULL || *argv == NULL) && argc == 2)
 		error_free(&a, argv, argc == 2);
