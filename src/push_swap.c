@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 20:07:57 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/18 10:35:57 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:01:06 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	len_a = stack_len(*a);
 	if (len_a == 5)
 		handle_five(a, b);
+	else if (len_a < 100)
+		push_till_three(a, b);
 	else
 		average_partitioning(a, b);
 	sort_three(a);
