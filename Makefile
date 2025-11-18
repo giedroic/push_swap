@@ -22,11 +22,13 @@ COMMANDS_OBJ = $(addprefix obj/, $(COMMANDS_SRC:%.c=%.o))
 
 INCLUDE = include/push_swap.h
 
+LIBFT_STATIC = libft/libft.a
+
 .PHONY : all libft clean fclean re
 
 all : libft $(OBJ_DIR) $(NAME)
 
-push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ)
+push_swap: $(MAIN_OBJ) $(UTILS_OBJ) $(COMMANDS_OBJ) $(LIBFT_STATIC)
 	$(CC) $^ $(LDFLAGS) -o $@ $(LDLIBS)
 
 obj/%.o : src/%.c $(INCLUDE)
