@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:55:12 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/11/18 11:22:36 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:41:07 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,6 @@ void	ft_free_split(char **split_array)
 
 void	error_free(t_stack_node **a, char **argv, bool is_argc_2)
 {
-	if ((argv == NULL || *argv == NULL) && is_argc_2 == true)
-	{
-		ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
-		exit(EXIT_FAILURE);
-	}
 	free_stack(a);
 	if (is_argc_2)
 		ft_free_split(argv);
