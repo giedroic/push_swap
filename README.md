@@ -1,77 +1,82 @@
-# push_swap Project Overview
+# push_swap
 
 ## Introduction
 
-`push_swap` is a C program designed to sort a list of integers using two
-stacks and a restricted set of operations. The goal is to produce the
-shortest possible sequence of operations to sort the data. This project
-is commonly associated with algorithm optimization challenges, such as
-those found in the 42 curriculum.
+The **push_swap** project is a command‑line program that computes an
+efficient sequence of operations to sort a list of integers. The sorting
+process is performed using two stacks and a strictly limited set of
+allowed operations, making the task an algorithmic and structural
+challenge centered around constrained problem‑solving.
 
-## Objectives
+## Purpose
 
--   Parse and validate input integers.
--   Implement two stacks (A and B) with allowed operations such as:
-    -   `sa`, `sb`, `ss` -- swap operations
-    -   `pa`, `pb` -- push operations
-    -   `ra`, `rb`, `rr` -- rotate operations
-    -   `rra`, `rrb`, `rrr` -- reverse rotate operations
--   Develop an efficient algorithm to generate the smallest sequence of
-    operations for sorting.
--   Handle edge cases such as duplicate inputs, invalid numbers, and
-    integer overflows.
+The project explores how complex sorting behavior can be achieved within
+a minimal operational model. By requiring the program to output an
+optimized sequence of stack operations rather than performing the sort
+directly, the project emphasizes control‑flow design, data‑structure
+organization, and thoughtful algorithm selection.
 
-## Project Structure
+## Core Functionality
 
--   **`src/`** -- Core program logic, sorting methods, stack operations.
--   **`include/`** -- Header files defining structures and function
-    prototypes.
--   **`libft/`** -- Custom utility library with implementations of
-    standard C functions.
--   **`Makefile`** -- Build automation for compiling and cleaning the
-    project.
+The program: - Accepts a series of integer arguments. - Validates and
+parses input, ensuring correctness and safety. - Constructs two stacks
+used throughout the sorting procedure. - Determines an operation
+sequence that sorts the values placed in Stack A. - Outputs the
+operations in the exact order needed to complete the transformation.
 
-## Key Features
+The allowed operations include: - **Swap:** interchange the top elements
+of a stack. - **Push:** move the top element from one stack to
+another. - **Rotate:** shift all elements of a stack upward. - **Reverse
+Rotate:** shift all elements downward.
 
--   Custom stack implementation
--   Multiple sorting strategies depending on input size
--   Memory-safe handling of dynamic data structures
--   Modular and maintainable code organization
+These constraints require a carefully structured approach to produce a
+minimal or near‑minimal instruction set.
 
-## How to Build
+## Architectural Overview
 
-``` bash
-make
-```
+The repository is organized into: - `src/` --- operational logic,
+parsing routines, and sorting strategy - `include/` --- type definitions
+and function declarations - `libft/` --- reusable utilities and helper
+functions - `Makefile` --- build automation and project rules
 
-## How to Run
+This separation promotes clarity, maintainability, and ease of
+navigation.
 
-``` bash
-./push_swap <list of integers>
-```
+## Sorting Approach
 
-### Example
+The sorting method adapts based on dataset size: - Smaller datasets rely
+on direct, deterministic instruction patterns. - Larger input sizes
+benefit from strategies such as chunk segmentation, cost‑based movement,
+and optimized rotations.
 
-``` bash
-./push_swap 3 2 1
-```
+The combination ensures predictable behavior and consistent performance
+across varying input complexities.
 
-## Output
+## Output Format
 
-The program outputs a list of stack operations which, when executed,
-sort the input numbers.
+The program prints stack operations line‑by‑line. When executed
+sequentially, these operations transform the initial unsorted stack into
+a fully ordered one.
 
 Example:
 
     pb
-    sa
+    ra
     pa
 
-## Notes
+## Project Characteristics
 
--   The efficiency of the algorithm is crucial---fewer operations result
-    in a better score.
--   This repository can be used as a reference or starting point for
-    learning data structure manipulation and algorithm optimization in
-    C.
+The project emphasizes: - Deterministic control over data
+transformations\
+- Efficient logical structuring of stack operations\
+- Clear separation of concerns within the codebase\
+- Consistent behavior across all edge cases, including duplicates,
+invalid input, and extreme values
 
+## Conclusion
+
+The **push_swap** project showcases a constraint‑based approach to
+sorting, highlighting how limited operations can be orchestrated to
+perform non‑trivial transformations on structured data. The project
+provides a cohesive implementation with attention to correctness,
+stability, and overall architectural organization.
